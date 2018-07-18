@@ -1,0 +1,176 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title ">Manage Label </h4>
+            <p class="card-category"> </p>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="TemplateForm">
+              <div class="row">
+                <div class="col-sm-3">
+
+                  <mat-form-field>
+                    <input formControlName="date" matInput [matDatepicker]="picker" placeholder="Date Require">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-3">
+                  <mat-form-field>
+                    <input maxlength="4" appInteger formControlName="integer" matInput placeholder="Integer Max 4 Digits">
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-3">
+                  <mat-form-field>
+                    <input appDouble formControlName="double" matInput placeholder="Double">
+                    <span class="form-control-feedback">
+                      <i class="material-icons">clear</i>
+                    </span>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-3">
+                  <mat-form-field>
+                    <mat-icon matSuffix>face</mat-icon>
+                    <input appAlphaNumeric formControlName="alphaNumeric" matInput placeholder="AlphaNumeric">
+                  </mat-form-field>
+                  <mat-error *ngIf="TemplateForm.get('alphaNumeric').hasError('required') && TemplateForm.get('alphaNumeric').touched">
+                    Email is
+                    <strong>required</strong>
+                  </mat-error>
+                  <!-- <mat-error *ngIf="!TemplateForm.get('alphaNumeric').valid && TemplateForm.get('alphaNumeric').touched" class="help-block">Please enter a valid AlphaNumeric!</mat-error> -->
+                </div>
+                <div class="col-sm-3">
+                  <mat-form-field>
+                    <input formControlName="disabled" matInput placeholder="Disabled">
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-3">
+                  <mat-form-field>
+                    <input type="text" placeholder="Auto Complete" aria-label="Number" matInput formControlName="autoComplete" [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-3">
+                  <mat-form-field>
+                    <mat-select placeholder="Select">
+                      <mat-option *ngFor="let option of options" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <input type="text" value="" placeholder="Regular" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="text" placeholder="With Floating Label">
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                  <mat-form-field class="example-full-width has-success">
+                    <input matInput type="text" placeholder="Success input">
+                    <span class="form-control-feedback">
+                      <i class="material-icons">done</i>
+                    </span>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                  <mat-form-field class="example-full-width has-danger">
+                    <input matInput type="text" placeholder="Error input">
+                    <span class="form-control-feedback">
+                      <i class="material-icons">clear</i>
+                    </span>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <table class="table table-bordered">
+                  <thead class="text-danger">
+                    <th>Name</th>
+                    <th>Country</th>
+                    <th>City</th>
+                    <th>Salary</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Dakota Rice</td>
+                      <td>Niger</td>
+                      <td>Oud-Turnhout</td>
+                      <td class="text-danger">$36,738</td>
+                    </tr>
+                    <tr>
+                      <td>Minerva Hooper</td>
+                      <td>Curaçao</td>
+                      <td>Sinaai-Waas</td>
+                      <td class="text-danger">$23,789</td>
+                    </tr>
+                    <tr>
+                      <td>Sage Rodriguez</td>
+                      <td>Netherlands</td>
+                      <td>Baileux</td>
+                      <td class="text-danger">$56,142</td>
+                    </tr>
+                    <tr>
+                      <td>Philip Chaney</td>
+                      <td>Korea, South</td>
+                      <td>Overland Park</td>
+                      <td class="text-danger">$38,735</td>
+                    </tr>
+                    <tr>
+                      <td>Doris Greene</td>
+                      <td>Malawi</td>
+                      <td>Feldkirchen in Kärnten</td>
+                      <td class="text-danger">$63,542</td>
+                    </tr>
+                    <tr>
+                      <td>Mason Porter</td>
+                      <td>Chile</td>
+                      <td>Gloucester</td>
+                      <td class="text-danger">$78,615</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <button mat-raised-button class="btn btn-primary btn-block" (click)="showNotification('top','right')">Bottom Right</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title ">Manage Label</h4>
+            <p class="card-category"> </p>
+          </div>
+          <div class="card-body">
+            <div style="text-align:center">
+              <h1>
+                <a href="javascript:void(0)" (click)="changeLanguage('en')">English</a>|
+                <a href="javascript:void(0)" (click)="changeLanguage('th')">ไทย</a>
+              </h1>
+              <h2>{{ 'HELLO' | translate:param}}</h2>
+              <h2 [innerHTML]="'GOODBYE' | translate"></h2>
+              <div translate [translateParams]="param">HELLO</div>
+              <div [translate]="'GOODBYE'"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,56 @@
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<mat-card>
+  <form [formGroup]="toteForm" novalidate (ngSubmit)="onSubmit()">
+
+    <mat-card-title>ToteDetailForm</mat-card-title>
+    <mat-card-content>
+      <p>{{toteForm.value | json }}</p>
+      <p>
+        <mat-form-field class="full-width">
+          <input name="ToteID" matInput placeholder="ToteID" formControlName="toteId">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="full-width">
+          <input type="number" matInput placeholder="AssignID" formControlName="assignId">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="full-width">
+          <input type="number" matInput placeholder="BombID" formControlName="bombId">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="full-width">
+          <input type="number" matInput placeholder="BatchID" formControlName="batchId">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="full-width">
+          <input type="text" matInput placeholder="BranchId" formControlName="branchId">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="full-width">
+          <input type="number" matInput placeholder="SumProduct" formControlName="sumProduct">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="full-width">
+          <input type="number" matInput placeholder="PickQty" formControlName="pickQty">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="full-width">
+          <input type="number" matInput placeholder="ActualQty" formControlName="actualQty">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="full-width">
+          <input type="number" matInput placeholder="ShortQty" formControlName="shortQty">
+        </mat-form-field>
+      </p>
+      <button mat-raised-button color="primary" type="submit">SAVE</button>
+    </mat-card-content>
+  </form>
+</mat-card>

@@ -1,0 +1,298 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title ">Manage Label</h4>
+            <p class="card-category"> </p>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-sm-2">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="PO Date" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-3">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="KeyWord" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-2">
+                  <button mat-raised-button type="submit" class="btn btn-danger pull-left">Search</button>
+                </div>
+                <div class="col-sm-4">
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <th>
+                        Route
+                      </th>
+                      <th>
+                        Store
+                      </th>
+                      <th>
+                        StoreNmae
+                      </th>
+                      <th>
+                        SW
+                      </th>
+                      <th>
+                        SQ
+                      </th>
+                      <th>
+                        SO
+                      </th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <mat-form-field appearance="fill">
+                    <input matInput placeholder="Store ID" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Store Name" type="text" disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Sum Q" type="text" disabled>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-2">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Sum W" type="text" disabled>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-2">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Sum Order" type="text" disabled>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-2">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Status" type="text" disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Product ID" type="text" disabled>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-5">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Product Name" type="text" disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Barcode" type="text" disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Tote ID" type="text" disabled>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-2">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="New Tote ID" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-2">
+                  <button mat-raised-button type="submit" class="btn btn-danger pull-left">Update</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Seq" type="text" disabled>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm-2">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="New Seq" type="text">
+                  </mat-form-field>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <!-- <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Monitor by Tote</h4>
+                        <p class="card-category"> สำหรับแสดงข้อมูลลัง</p>
+                    </div>  -->
+          <div class="card-body">
+
+            <div class="table-responsive">
+              <table class="table">
+                <thead class=" text-primary">
+                  <th>
+                    Work Date
+                  </th>
+                  <th>
+                    Route
+                  </th>
+                  <th>
+                    StoreID
+                  </th>
+                  <th>
+                    Store Name
+                  </th>
+                  <th>
+                    ToteID
+                  </th>
+                  <th>
+                    Seq
+                  </th>
+                  <th>
+                    NoPerTote
+                  </th>
+                  <th>
+                    ProductID
+                  </th>
+                  <th>
+                    Product Name
+                  </th>
+                  <th>
+                    Barcode No
+                  </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      Dakota Rice
+                    </td>
+                    <td>
+                      Niger
+                    </td>
+                    <td>
+                      Oud-Turnhout
+                    </td>
+                    <td class="text-primary">
+                      $36,738
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      Minerva Hooper
+                    </td>
+                    <td>
+                      Curaçao
+                    </td>
+                    <td>
+                      Sinaai-Waas
+                    </td>
+                    <td class="text-primary">
+                      $23,789
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      3
+                    </td>
+                    <td>
+                      Sage Rodriguez
+                    </td>
+                    <td>
+                      Netherlands
+                    </td>
+                    <td>
+                      Baileux
+                    </td>
+                    <td class="text-primary">
+                      $56,142
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      4
+                    </td>
+                    <td>
+                      Philip Chaney
+                    </td>
+                    <td>
+                      Korea, South
+                    </td>
+                    <td>
+                      Overland Park
+                    </td>
+                    <td class="text-primary">
+                      $38,735
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      5
+                    </td>
+                    <td>
+                      Doris Greene
+                    </td>
+                    <td>
+                      Malawi
+                    </td>
+                    <td>
+                      Feldkirchen in Kärnten
+                    </td>
+                    <td class="text-primary">
+                      $63,542
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      6
+                    </td>
+                    <td>
+                      Mason Porter
+                    </td>
+                    <td>
+                      Chile
+                    </td>
+                    <td>
+                      Gloucester
+                    </td>
+                    <td class="text-primary">
+                      $78,615
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
